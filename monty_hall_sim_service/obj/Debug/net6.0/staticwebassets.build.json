@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "YfzOh9awYUmjQ+i3fVMT7mYf5fDxEq58MJ/e/E3/w1A=",
+  "Source": "monty_hall_sim_service",
+  "BasePath": "_content/monty_hall_sim_service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
