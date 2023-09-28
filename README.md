@@ -21,3 +21,6 @@ The Monty Hall problem has been a source of much debate and confusion since it w
 ## Expected outcome
 * When backend answers then the results of the simulations should be reflected in UI (you can use any possible way for visualizing result in Web).
 * Testing should be included in the assignment.
+
+## Important Points
+* The backend has been developed with [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.22-windows-hosting-bundle-installer)
