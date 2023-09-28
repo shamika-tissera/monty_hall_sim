@@ -1,0 +1,67 @@
+<div class="dark-theme p-4">
+  <div class="container">
+    <h1 class="text-center mt-5">
+      <strong>
+        Monty Hall Problem Simulator
+      </strong>
+    </h1>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card-custom card p-5 mt-5">
+          <div class="form-group">
+            <label class="form-check-label" for="simulationsInput">Number of Simulations:</label>
+            <input [(ngModel)]="numberOfSimulations" id="simulationsInput" type="number" class="form-control" />
+          </div>
+          <div class="form-group mt-4">
+            <label class="form-check-label" for="changeDoorCheckbox">Change Door:</label>
+            <input [(ngModel)]="changeDoor" id="changeDoorCheckbox" type="checkbox" class="form-check-input mx-2" />
+            <p *ngIf="!changeDoor" class="card-text">
+              <em>You chose to stay with your original door at each round.</em>
+            </p>
+            <p *ngIf="changeDoor" class="card-text">
+              <em>You chose to change your door at each round.</em>
+            </p>
+          </div>
+          <button (click)="runSimulations()" class="btn btn-primary mt-4">
+            Run Simulations
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card-custom card p-3 mt-4">
+          <div class="card-body text-center">
+            <h2 class="card-title">Simulation Results</h2>
+            <div *ngIf="isLoading" class="loading-container mt-3">
+              <div class="loading-spinner"></div>
+            </div>
+            <p *ngIf="!isLoading" class="card-text">
+              Number of Wins: {{ numberOfWins }} ({{ (numberOfWins / numberOfSimulations) > 0 ? ((numberOfWins / numberOfSimulations) * 100 | number: '1.0-0') : 0 }}% of the total simulations)
+            </p>
+            <p *ngIf="!isLoading" class="card-text">
+              Number of Losses: {{ numberOfLosses }} ({{ (numberOfLosses / numberOfSimulations) > 0 ? ((numberOfLosses / numberOfSimulations) * 100 | number: '1.0-0') : 0 }}% of the total simulations)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card-custom card p-3 mt-4">
+          <div class="card-body text-center">
+            <h2 class="card-title">Statistics</h2>
+            <div *ngIf="isLoading" class="loading-container mt-3">
+              <div class="loading-spinner"></div>
+            </div>
+            <div style="height: 150%;">
+              <app-chart></app-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
