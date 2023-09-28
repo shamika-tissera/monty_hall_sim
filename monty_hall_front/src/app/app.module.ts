@@ -10,11 +10,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
-import { VisualComponent } from './visual/visual.component';
 import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
-  declarations: [AppComponent, VisualComponent, ChartComponent],
+  declarations: [AppComponent, ChartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

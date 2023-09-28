@@ -3,7 +3,6 @@ import { SharedService } from 'src/app/shared.service';
 import { ToastrService } from 'ngx-toastr';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
-import { VisualComponent } from './visual/visual.component';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({

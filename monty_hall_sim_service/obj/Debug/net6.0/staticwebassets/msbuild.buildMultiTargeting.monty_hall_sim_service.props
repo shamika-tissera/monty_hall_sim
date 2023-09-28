@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\monty_hall_sim_service.props" />
-</Project>

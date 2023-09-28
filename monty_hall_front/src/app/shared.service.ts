@@ -12,19 +12,6 @@ export class SharedService {
     runSimulation(data: object) {
         return this.http.post(APIUrl + '/simulation', data);
     }
-    
-    // private source_wins = new BehaviorSubject<number>(0);
-    // private source_losses = new BehaviorSubject<number>(0);
-
-    // currentWins = this.source_wins.asObservable();
-    // currentLosses = this.source_losses.asObservable();
-
-    // changeWins(wins: number) {
-    //     this.source_wins.next(wins);
-    // }
-    // changeLosses(losses: number) {
-    //     this.source_losses.next(losses);
-    // }
 
     private source_array = new BehaviorSubject<Array<number>>([0, 0]);
 

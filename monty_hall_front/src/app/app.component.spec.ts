@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'MontyHallSimulatorUI'`, () => {
+  it(`should have as title 'Monty Hall Simulator'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('MontyHallSimulatorUI');
+    expect(app.title).toEqual('Monty Hall Simulator');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('MontyHallSimulatorUI app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Monty Hall Simulator app is running!');
   });
 });
